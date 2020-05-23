@@ -21,6 +21,7 @@ class String
       0
     else
       string_array.map { |string| string.split("!"), string.split("?") }
+      string_array.length
     end
   end
 end
