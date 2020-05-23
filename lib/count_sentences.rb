@@ -15,6 +15,12 @@ class String
   end
 
   def count_sentences
-    self.split(".").split("!").split("?").length
+    string_array = []
+    string_array = self.split(".")
+    if string_array.length == 0
+      0
+    else
+      string_array.map { |string| string.split("!"), string.split("?") }
+    end
   end
 end
