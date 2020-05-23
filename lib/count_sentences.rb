@@ -32,6 +32,6 @@ class String
       #binding.pry
       #string_array.map! { |string| string.split("?") }
       #string_array.length
-    end
+    
   end
 end
