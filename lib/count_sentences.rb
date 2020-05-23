@@ -26,7 +26,7 @@ class String
       elsif string.end_with?("!")
         count += 1
       end
-      count
+      return count
     end
       #string_array.map! { |string| string.split("!") }
       #binding.pry
