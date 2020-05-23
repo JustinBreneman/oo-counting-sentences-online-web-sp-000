@@ -20,11 +20,8 @@ class String
     if string_array.length == 0
       0
     else
-      string_array.map! do |string|
-        string.split(".")
-        string.split("!")
-        string.split("?")
-      end
+      string_array.map! { |string| string.split("!") }
+      string_array.map! { |string| string.split("?") }
       string_array.length
     end
   end
