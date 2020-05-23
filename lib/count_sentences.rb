@@ -18,7 +18,7 @@ class String
     string_array = []
     string_array = self.split(" ")
     count = 0
-    string_array.all? do |string|
+    string_array.each do |string|
       if string.end_with?(".")
         count += 1
       elsif string.end_with?("?")
