@@ -16,14 +16,22 @@ class String
 
   def count_sentences
     string_array = []
-    string_array = self.split(".")
-    if string_array.length == 0
-      0
-    else
-      string_array.map! { |string| string.split("!") }
-      binding.pry
-      string_array.map! { |string| string.split("?") }
-      string_array.length
+    string_array = self.split(" ")
+    count = 0
+    string_array.all? do |string|
+      if string.end_with?(".")
+        count += 1
+      elsif string.end_with?("?")
+        count += 1
+      elsif string.end_with?("!")
+        count += 1
+      end
+      count
+    end
+      #string_array.map! { |string| string.split("!") }
+      #binding.pry
+      #string_array.map! { |string| string.split("?") }
+      #string_array.length
     end
   end
 end
